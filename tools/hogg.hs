@@ -4,6 +4,7 @@ module Main where
 import System.Exit
 import System.IO
 
+import Control.Monad (when, foldM)
 import Control.Monad.Reader
 import Control.Exception
 
@@ -22,8 +23,7 @@ import qualified Data.ByteString.Lazy.Char8 as C
 import Data.Char
 import Data.List hiding (sort)
 
-import System.Locale (defaultTimeLocale)
-import Data.Time.Format (formatTime)
+import Data.Time.Format (formatTime, defaultTimeLocale)
 import Data.Time.Clock (getCurrentTime)
 
 import Codec.Container.Ogg.Chain
